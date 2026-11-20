@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<title>Mis Gastos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Gastos">
+<meta name="theme-color" content="#0f766e">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="./icons/icon-192.png">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header class="top">
+  <h1>Mis Gastos</h1>
+  <button id="export" type="button" class="ghost">Exportar CSV</button>
+</header>
+<main>
+  <section class="card">
+    <h2>Nuevo gasto</h2>
+    <form id="form" autocomplete="off">
+      <label>Monto
+        <input id="monto" inputmode="decimal" placeholder="0,00" required>
+      </label>
+      <label>Categoría
+        <select id="categoria"></select>
+      </label>
+      <label>Descripción (opcional)
+        <input id="desc" type="text" maxlength="100" placeholder="Ej: supermercado">
+      </label>
+      <label>Fecha
+        <input id="fecha" type="date" required>
+      </label>
+      <button type="submit" class="primary">Agregar gasto</button>
+    </form>
+  </section>
+
+  <section class="card">
+    <nav class="month">
+      <button id="prev" type="button" aria-label="Mes anterior">‹</button>
+      <strong id="mes"></strong>
+      <button id="next" type="button" aria-label="Mes siguiente">›</button>
+    </nav>
+    <p class="total">Total del mes: <strong id="total"></strong></p>
+    <div id="breakdown"></div>
+  </section>
+
+  <section class="card">
+    <h2>Gastos del mes</h2>
+    <ul id="list"></ul>
+    <p id="empty" class="muted" hidden>Todavía no cargaste gastos este mes.</p>
+  </section>
+</main>
+<script src="./app.js"></script>
+</body>
+</html>
