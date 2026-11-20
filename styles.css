@@ -1,0 +1,35 @@
+:root{--bg:#f2f2f7;--card:#fff;--text:#1c1c1e;--muted:#6b7280;--accent:#0f766e;--line:#e5e7eb;--danger:#dc2626;--bar:#d1fae5}
+@media (prefers-color-scheme:dark){:root{--bg:#000;--card:#1c1c1e;--text:#f2f2f7;--muted:#9ca3af;--accent:#2dd4bf;--line:#2c2c2e;--danger:#f87171;--bar:#134e4a}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;
+padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+.top{display:flex;justify-content:space-between;align-items:center;padding:12px 16px}
+h1{margin:0;font-size:1.6rem}
+h2{margin:0 0 10px;font-size:1.1rem}
+main{padding:0 16px 24px;max-width:600px;margin:0 auto}
+.card{background:var(--card);border-radius:14px;padding:16px;margin-bottom:16px}
+label{display:block;font-size:.85rem;color:var(--muted);margin-bottom:12px}
+input,select{display:block;width:100%;margin-top:4px;min-height:48px;padding:10px 12px;font:inherit;font-size:16px;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:10px;-webkit-appearance:none;appearance:none}
+button{font:inherit;font-size:16px;min-height:48px;min-width:48px;border:0;border-radius:10px;padding:0 16px;cursor:pointer;color:var(--accent);background:transparent}
+button.primary{width:100%;background:var(--accent);color:#fff;font-weight:600}
+@media (prefers-color-scheme:dark){button.primary{color:#000}}
+button.ghost{border:1px solid var(--line)}
+.month{display:flex;justify-content:space-between;align-items:center}
+.month button{font-size:1.8rem;line-height:1}
+.month strong{font-size:1.2rem;text-transform:capitalize}
+.total{font-size:1.1rem;margin:8px 0 12px}
+.total strong{font-size:1.4rem}
+.row{margin-bottom:10px}
+.row .l{display:flex;justify-content:space-between;font-size:.9rem}
+.bar{height:10px;background:var(--bar);border-radius:5px;margin-top:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:5px}
+ul{list-style:none;margin:0;padding:0}
+li{display:flex;align-items:center;gap:8px;padding:10px 0;border-top:1px solid var(--line)}
+li:first-child{border-top:0}
+li .info{flex:1;min-width:0}
+li .d{overflow-wrap:anywhere}
+li .s{font-size:.8rem;color:var(--muted)}
+li .a{font-weight:600;white-space:nowrap}
+li button{color:var(--danger);font-size:1.3rem;padding:0}
+.muted{color:var(--muted)}
